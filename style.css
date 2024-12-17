@@ -1,0 +1,30 @@
+body {
+    background-color: teal;
+    color: white;
+    margin: 0;
+}
+
+h1 {
+    font-size: clamp(16px, 6vw, 3em);
+}
+
+/* gör main till container */
+header, main {
+    container-type: inline-size;
+    container-name: main;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: hotpink;
+}
+
+@container main (width < 400px) {
+    .card {
+        background-color: rebeccapurple;
+    }
+    h1 {
+        color: black;
+    }
+}
